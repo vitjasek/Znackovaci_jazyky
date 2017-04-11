@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="vesmir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sektor"/>
+      </xs:sequence>
+      <xs:attribute name="pocet_sektoru" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sektor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="system" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="nazev_sektoru" type="xs:string" use="required"/>
+      <xs:attribute name="pocet_systemu" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="system">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="planeta" maxOccurs="unbounded"/>
+        <xs:element ref="pilot" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="nazev_systemu" type="xs:string"/>
+      <xs:attribute name="pocet_planet" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="planeta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="obyvatele" maxOccurs="1" minOccurs="0"/>
+        <xs:element ref="zamereni" maxOccurs="1" minOccurs="0"/>
+        <xs:element ref="politika" maxOccurs="1" minOccurs="0"/>
+        <xs:element ref="pilot" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="nazev_planety" type="xs:string" use="required"/>
+      <xs:attribute name="pocet_obyvatel" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="zamereni">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Zemedelstvi"/>
+        <xs:enumeration value="Prumysl"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="politika">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Anarchie"/>
+        <xs:enumeration value="Diktatura"/>
+        <xs:enumeration value="Monarchie"/>
+        <xs:enumeration value="Demokracie"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="rasa">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Galian"/>
+        <xs:enumeration value="Feyan"/>
+        <xs:enumeration value="Člověk"/>
+        <xs:enumeration value="Peleng"/>
+        <xs:enumeration value="Maloc"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="obyvatele">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rasa"/>
+      </xs:sequence>
+      <xs:attribute name="vstah_k_pilotovi" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="pilot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="jmeno" type="xs:string"/>
+        <xs:element ref="rank"/>
+        <xs:element ref="rasa"/>
+        <xs:element ref="rating"/>
+        <xs:element ref="role"/>
+        <xs:element ref="vesmirna_lod"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rank">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Zelenac"/>
+        <xs:enumeration value="Kadet"/>
+        <xs:enumeration value="Pilot"/>
+        <xs:enumeration value="Kapitan"/>
+        <xs:enumeration value="Eso"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="rating">
+    <xs:complexType>
+      <xs:attribute name="ranger_body" type="xs:positiveInteger" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="vesmirna_lod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="parametry"/>
+      </xs:sequence>
+      <xs:attribute name="kapacita" type="xs:integer" use="optional"/>
+      <xs:attribute name="typ_trupu" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="role">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Ranger"/>
+        <xs:enumeration value="Obchodnik"/>
+        <xs:enumeration value="Diplomat"/>
+        <xs:enumeration value="Korzar"/>
+        <xs:enumeration value="Pirat"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="parametry">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="typ" type="xs:string"/>
+        <xs:element name="rychlost" type="xs:integer"/>
+        <xs:element name="velikost_skoku" type="xs:integer"/>
+        <xs:element name="stity" type="xs:integer"/>
+        <xs:element name="pocet_slotu_na_zbrane" type="xs:integer"/>
+        <xs:element name="droid" type="xs:boolean"/>
+        <xs:element name="jerab" type="xs:boolean"/>
+        <xs:element name="generator" type="xs:boolean"/>
+        <xs:element name="radar" type="xs:boolean"/>
+        <xs:element name="scaner" type="xs:boolean"/>
+        <xs:element name="afterburner" type="xs:boolean"/>
+        <xs:element name="sloty_na_artefakty" type="xs:decimal"/>
+        <xs:element name="cena" type="xs:integer"/>
+        <xs:element name="exists" type="xs:boolean"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
