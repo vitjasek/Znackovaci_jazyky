@@ -5,7 +5,7 @@
   <xs:element name="vesmir">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="sektor"/>
+        <xs:element ref="sektor" maxOccurs="unbounded" minOccurs="1"/>
       </xs:sequence>
       <xs:attribute name="pocet_sektoru" type="xs:decimal"/>
     </xs:complexType>
@@ -14,21 +14,28 @@
   <xs:element name="sektor">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="system" maxOccurs="unbounded"/>
+        <xs:element ref="system" maxOccurs="unbounded" minOccurs="1"/>
       </xs:sequence>
       <xs:attribute name="nazev_sektoru" type="xs:string" use="required"/>
-      <xs:attribute name="pocet_systemu" type="xs:string" use="required"/>
+      <xs:attribute name="pocet_systemu" type="xs:decimal" use="required"/>
     </xs:complexType>
   </xs:element>
 
   <xs:element name="system">
     <xs:complexType>
       <xs:sequence>
+        <xs:element ref="hvezda" maxOccurs="1" minOccurs="1"/>
         <xs:element ref="planeta" maxOccurs="unbounded"/>
         <xs:element ref="pilot" maxOccurs="unbounded" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="nazev_systemu" type="xs:string"/>
       <xs:attribute name="pocet_planet" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="hvezda">
+    <xs:complexType>
+      <xs:attribute name="nazev_hvezdy" type="xs:string" use="required"/>
     </xs:complexType>
   </xs:element>
 

@@ -4,8 +4,9 @@
   xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
   xsi:noNamespaceSchemaLocation='SR_schema.xsd' pocet_sektoru="2">
 
-  <sektor nazev_sektoru="Milky Way" pocet_systemu="2">
+  <sektor nazev_sektoru="Karagon" pocet_systemu="2">
     <system nazev_systemu="Slunecni soustava" pocet_planet="9">
+      <hvezda nazev_hvezdy="Slunce"></hvezda>
       <planeta nazev_planety="Merkur" pocet_obyvatel="0">
       </planeta>
 
@@ -89,22 +90,24 @@
       <planeta nazev_planety="Pluto" pocet_obyvatel="0"></planeta>
     </system>
 
-    <system nazev_systemu="Beetlegeuse" pocet_planet="3">
-      <planeta nazev_planety="Kappa" pocet_obyvatel="0"></planeta>
-      <planeta nazev_planety="Gamma" pocet_obyvatel="800000000">
+    <system nazev_systemu="Betelgeuse" pocet_planet="3">
+      <hvezda nazev_hvezdy="Betelgeuse"></hvezda>
+      <planeta nazev_planety="Astron" pocet_obyvatel="0"></planeta>
+      <planeta nazev_planety="Elinia" pocet_obyvatel="800000000">
         <obyvatele vstah_k_pilotovi="přátelský">
           <rasa>Galian</rasa>
         </obyvatele>
         <politika>Monarchie</politika>
         <zamereni>Prumysl</zamereni>
       </planeta>
-      <planeta nazev_planety="Omega" pocet_obyvatel="0"></planeta>
+      <planeta nazev_planety="Big Cauldron" pocet_obyvatel="0"></planeta>
     </system>
   </sektor>
 
-  <sektor nazev_sektoru="Proxima" pocet_systemu="1">
-    <system nazev_systemu="Proxima Centauri" pocet_planet="2">
-      <planeta nazev_planety="XJ105" pocet_obyvatel="10000000000">
+  <sektor nazev_sektoru="Perez" pocet_systemu="1">
+    <system nazev_systemu="Castor" pocet_planet="2">
+      <hvezda nazev_hvezdy="Castor"></hvezda>
+      <planeta nazev_planety="Tolt-Hain" pocet_obyvatel="10000000000">
         <obyvatele vstah_k_pilotovi="Nepřátelský">
           <rasa>Maloc</rasa>
         </obyvatele>
@@ -136,7 +139,7 @@
         </pilot>
       </planeta>
 
-      <planeta nazev_planety="XJ106" pocet_obyvatel="0"></planeta>
+      <planeta nazev_planety="Zhenebe" pocet_obyvatel="0"></planeta>
     </system>
   </sektor>
 

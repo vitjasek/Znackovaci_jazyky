@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--Název
+Obsah s odkazy
+Úvod – o čem to je.
+Metodika (použité nástroje, ...)
+Popis elementů a atributů (proč, co představují)
+Popis transformace
+Závěr
+Patička (autor atd.) -->
+<html lang="cs">
+  <head>
+    <title>Semestrální práce</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#obsah">Obsah</a>
+        <a href="#uvod">Úvod</a>
+        <a href="#metodika">Metodika</a>
+        <a href="#popis_elementu">Popis elementů</a>
+        <a href="#popis_transformace">Popis transformace</a>
+        <a href="#zaver">Závěr</a>
+      </nav>
+    </header>
+    <main>
+      <article>
+
+        <header>
+          <h1>Dokumentace k projektu Space Rangers 2</h1>
+          <h2 id="obsah">Obsah</h2>
+          <nav>
+            <ol>
+              <li><a href="#uvod">Úvod</a></li>
+              <li><a href="#metodika">Metodika</a></li>
+              <li><a href="#popis_elementu">Popis elementů</a></li>
+              <li><a href="#popis_transformace">Popis transformace</a></li>
+              <li><a href="#zaver">Závěr</a></li>
+            </ol>
+          </nav>
+        </header>
+
+        <section>
+          <h2 id="uvod">Úvod</h2>
+          <p>Projekt Space Rangers 2.
+            V tomto dokumentu najdete dokumentaci k XML popisu hry Space Rangers 2(dále už jen SR). XML je vztaženo k hráči. SR je video hra, která se odehrává v prostředí vesmíru.
+            XML popis video hry je samozřejmě jen stručně naznačen. Samotná hra má daleko větší rozsah.
+          </p>
+          <h3>Motivace</h3>
+          <p>Motivací je popsat XML v kterém se nachází popis video hry Space Rangers 2. Veškeré atributy jsou zde
+            čitelně popsány a vysvětleny.</p>
+        </section>
+
+        <section>
+          <h2 id="metodika">Metodika</h2>
+          <p>XML o video hře SR popisuje logiku herního mechanismu. V XML je popsán herní mechanismus prostředí, který je viditelný hráči.
+            Soubor SR_schema.xsd obsahuje stylesheet, definice, podle kterých jsem vytvořil SR_xml.xml soubor. V definicích jsou popsaná pravidla jak XML dokument může být tvořen,
+            požaduje informace které musí zadávat uživatel, ale má i předdefinovaný výčtový typy kde si musíme vybrat. Atributy jsou jednoznačně definovaný, takže by nemělo docházet k jejich záměně.
+            Transformace vytáhne z XML informace, které by hráč dostal po kliknutím na sekundární tlačítko myši na příslušný element (pokud je smaozřejmě podporována takováto akce).
+            Celý projekt byl vypracován v NetBeansIDE studiu a v něm i validován.</p>
+        </section>
+
+        <section>
+          <h2 id="popis_elementu">
+            Popis elementů a jejich atributů
+          </h2>
+
+          <h3>
+            Vesmír
+          </h3>
+          <p>Vesmír představuje prostředí v kterém se vše odehrává. Můžeme si ho představit jako šachovnici v šachách. Prostě hrací pole. Vesmír má jeden atribut, tím je počet sektorů.</p>
+          <h4>Atributy</h4>
+          <ul>
+            <li><a href="#pocet_sektoru"> pocet_sektoru</a></li>
+          </ul>
+          <h5 id="pocet_sektoru">pocet_sektoru</h5>
+          <p>Atribut pocet_sektoru určuje kolik sektorů v našem hracím poli máme. Atribut je celočíselný</p>
+
+          <h3>
+            Sektor
+          </h3>
+          <p></p>
+          <h4>Atributy</h4>
+          <ul>
+            <li><a href="#nazev_sektoru">nazev_sektoru</a></li>
+            <li><a href="#pocet_systemu">pocet_systemu</a></li>
+          </ul>
+          <h5 id="nazev_sektoru">nazev_sektoru</h5>
+          <p>Atribut nazev_sektoru identifikuje daný sektor mapy galaxie(Vesmír). Atribut je řetězcový a je povinný.</p>
+          <h5 id="pocet_systemu">pocet_systemu</h5>
+          <p>Atribut pocet_systemu nám říká kolik v daném sektoru je systémů (hvězdných soustav). Atribut je celočíselný a je povinný.</p>
+
+          <h3>
+            System
+          </h3>
+          <p>Systémy jsou v podstatě hvězdé soustavy. Každý takovýto systém má svojí hlavní hvězdu kolem které obíhají planety. Systém se obvykle jmenuje podle jeho hvězdy a má různý počet planet.
+            Hvězda bez obíhajících planet není systém, takže systém musí mít alespoň jednu planetu.</p>
+          <h4>Atributy</h4>
+          <ul>
+            <li><a href="#nazev_systemu">nazev_systemu</a></li>
+            <li><a href="#pocet_planet">pocet_planet</a></li>
+          </ul>
+          <h5 id="nazev_systemu">nazev_systemu</h5>
+          <p>Atribut nazev_systemu identifikuje daný systém v sektoru. Atribut je řetězcový a je povinný.</p>
+          <h5 id="pocet_planet">pocet_planet</h5>
+          <p>Atribut pocet_planet nám říká kolik v daném systému je planet. Atribut je celočíselný a je povinný.</p>
+
+          <h3>
+            Hvezda
+          </h3>
+          <p>Hvězda je středem každého systému. Kolem hvězdy obíhají planety po oběžných drahách. Hvězda nemá pro hráče dalších strategických významů.</p>
+          <h4>Atributy</h4>
+          <ul>
+            <li><a href="#nazev_hvezdy">nazev_hvezdy</a></li>
+          </ul>
+          <h5 id="nazev_hvezdy">nazev_hvezdy</h5>
+          <p>Atribut nazev_hvezdy identifikuje daný systém v sektoru. Atribut je řetězcový a je povinný.</p>
+
+          <h3>
+            Planeta
+          </h3>
+          <p>Planety jsou buď obydlené nebo neobydlené. Pilot může přistát na obydlené i na neobydlené planetě. Obydlená planeta pak má určitý počet obyvatel, vládu(typ vlády) a specializuje se
+            buď na průmysl nebo na zemědělství. Planeta nebo spíše vláda na planetě má k hráči postoj, podle kterého je s hráčem na takovéto planetě zacházeno.</p>
+          <h4>Atributy</h4>
+          <ul>
+            <li><a href="#nazev_planety">nazev_planety</a></li>
+            <li><a href="#pocet_obyvatel">pocet_obyvatel</a></li>
+          </ul>
+          <h5 id="nazev_planety">nazev_planety</h5>
+          <p>Atribut nazev_planety identifikuje dannou planetu v systému. Atribut je řetězcový a je povinný.</p>
+          <h5 id="pocet_obyvatel">pocet_obyvatel</h5>
+          <p>Atribut pocet_obyvatel říká kolik obyvatel danná planeta má a zároveň tedy rozhoduje jestli je planeta obydlená, či ne. Atribut je číselný a je povinný.</p>
+
+          <h3>
+            Zamereni
+          </h3>
+          <p>Zamereni se týká planet. Planeta je buď primárně zaměřená na zemědělství a nebo průmysl.</p>
+          <h4>Atributy</h4>
+          <p>Zamereni je výčtový typ.</p>
+
+          <h3>
+            Politika
+          </h3>
+          <p>Politika se týká planet. Planety mají globální vlády a tím pádem se daná politika týká celé planety a né jednotlivých států.</p>
+          <h4>Atributy</h4>
+          <p>Politika je výčtový typ.</p>
+
+          <h3>
+            Rasa
+          </h3>
+          <p>Rasa se týká planet. Rasa rozhoduje o tom jaký typ obyvatel žije na danné planetě.</p>
+          <h4>Atributy</h4>
+          <p>Rasa je výčtový typ.</p>
+
+          <h3>
+            Obyvatele
+          </h3>
+          <p>Obyvatele se týka planet. Obyvatele obsahují odkaz na rasu. Obyvatele planety jsou té či oné rasy a mají k hráči různý vstahy.</p>
+          <h4>Atributy</h4>
+          <ul>
+            <li><a href="#vstah_k_pilotovi">vstah_k_pilotovi</a></li>
+          </ul>
+          <h5 id="vstah_k_pilotovi">vstah_k_pilotovi</h5>
+          <p>Atribut vstah_k_pilotovi říká jaký přístup od obyvatel může hráč na danné planetě očekávat.</p>
+
+          <h3>
+            Pilot
+          </h3>
+          <p>Pilot je AI kountrolované počítačem. Pilot vlastní vesmírnou loď, když je zničena tak je pilot zabit. Pilota nelze zabít/zničit na planetě, pouze ve vesmíru.</p>
+
+          <h3>
+            Rank
+          </h3>
+          <p>Rank se vstahuje k pilotovi, jde o rámcový hodnocení výkonů pilota.</p>
+          <h4>Atributy</h4>
+          <p>Rank je výčtový typ.</p>
+
+          <h3>
+            Rating
+          </h3>
+          <p>Rating se týká pilota. Jde o počet bodů které pilot obdržel za své výkony.</p>
+          <h4>Atributy</h4>
+          <ul>
+            <li><a href="#ranger_body">ranger_body</a></li>
+          </ul>
+          <h5 id="vstah_k_pilotovi">ranger_body</h5>
+          <p>Atribut ranger_body říká kolik bodů pilot získal za svoje činy.</p>
+
+          <h3>
+            Role
+          </h3>
+          <p>Role se týká pilota. Jde o pilotovu specializaci.</p>
+          <h4>Atributy</h4>
+          <p>Role je výčtový typ.</p>
+
+          <h3>
+            Vesmirna_lod
+          </h3>
+          <p>Vesmirna_lod patří k pilotovi. Každý pilot má svojí loď, lodě se liší v parametrech, vybavení a kapacitě.</p>
+          <h4>Atributy</h4>
+          <ul>
+            <li><a href="#kapacita">kapacita</a></li>
+            <li><a href="#typ_trupu">typ_trupu</a></li>
+          </ul>
+          <h5 id="kapacita">kapacita</h5>
+          <p>Kapacita určuje kolik se do vesmírné lodě vejde. Ovlivňuje celkovou hmotnost trupu a tím pádem i její rychlost.</p>
+          <h5 id="typ_trupu">typ_trupu</h5>
+          <p>Typ_trupu říká o jaký trup jde. Trupů může být velmi mnoho druhů.</p>
+
+          <h3>
+            Parametry
+          </h3>
+          <p>Parametry jsou svázány k trupu resp. vesmírný loďi. Mohou se lišit dle účelu a typu lodi.</p>
+        </section>
+
+        <section>
+          <h2 id="popis_transformace">
+            Popis transformace
+          </h2>
+        </section>
+
+        <section>
+          <h2 id="zaver">
+            Závěr
+          </h2>
+        </section>
+        <footer>
+          Napsal Vít&nbsp;Jašek&nbsp;&nbsp;&copy;.
+        </footer>
+        <aside>
+          <h2>Informace o projektu.</h2>
+          <table style="border: 1px solid green">
+            <tr>
+              <th>Autor XML</th>
+              <th>Zadavatel</th>
+              <th>Název projektu</th>
+            </tr>
+            <tr>
+              <td>Vít&nbsp;Jašek</td>
+              <td>Ing.&nbsp;Jan&nbsp;Masner</td>
+              <td>Space Rangers 2</td>
+            </tr>
+          </table>
+        </aside>
+      </article>
+    </main>
+    <footer>
+      ČZU PEF INFO
+    </footer>
+  </body>
+</html>
