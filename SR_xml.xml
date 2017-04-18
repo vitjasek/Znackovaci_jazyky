@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vesmir
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:noNamespaceSchemaLocation='SR_schema.xsd' pocet_sektoru="2">
+
+  <sektor nazev_sektoru="Milky Way" pocet_systemu="2">
+    <system nazev_systemu="Slunecni soustava" pocet_planet="9">
+      <planeta nazev_planety="Merkur" pocet_obyvatel="0">
+      </planeta>
+
+      <planeta nazev_planety="Venuše" pocet_obyvatel="5000000000">
+        <obyvatele vstah_k_pilotovi="Přátelský">
+          <rasa>Člověk</rasa>
+        </obyvatele>
+        <politika>Anarchie</politika>
+        <zamereni>Zemedelstvi</zamereni>
+      </planeta>
+
+      <planeta nazev_planety="Země" pocet_obyvatel="10000000000">
+        <obyvatele vstah_k_pilotovi="Přátelský">
+          <rasa>Člověk</rasa>
+        </obyvatele>
+        <politika>Demokracie</politika>
+        <zamereni>Prumysl</zamereni>
+        <pilot>
+          <jmeno>Rampa McQuack</jmeno>
+          <rank>Zelenac</rank>
+          <rasa>Člověk</rasa>
+          <rating ranger_body="150"></rating>
+          <role>Ranger</role>
+          <vesmirna_lod kapacita="350" typ_trupu="Ranger hull">
+            <parametry>
+              <afterburner>true</afterburner>
+              <cena>50000</cena>
+              <droid>true</droid>
+              <generator>true</generator>
+              <jerab>true</jerab>
+              <pocet_slotu_na_zbrane>3</pocet_slotu_na_zbrane>
+              <radar>true</radar>
+              <rychlost>400</rychlost>
+              <scaner>true</scaner>
+              <sloty_na_artefakty>3</sloty_na_artefakty>
+              <stity>20</stity>
+              <typ>clasic rookie ranger hull</typ>
+              <velikost_skoku>20</velikost_skoku>
+            </parametry>
+          </vesmirna_lod>
+        </pilot>
+      </planeta>
+
+      <planeta nazev_planety="Mars" pocet_obyvatel="6000000000">
+        <obyvatele vstah_k_pilotovi="neutrální">
+          <rasa>Člověk</rasa>
+        </obyvatele>
+        <politika>Demokracie</politika>
+        <zamereni>Prumysl</zamereni>
+      </planeta>
+
+      <pilot>
+        <jmeno>Rimmer</jmeno>
+        <rank>Eso</rank>
+        <rasa>Člověk</rasa>
+        <rating ranger_body="10000"></rating>
+        <role>Ranger</role>
+        <vesmirna_lod kapacita="1000" typ_trupu="Custom ranger ACE hull">
+          <parametry>
+            <afterburner>true</afterburner>
+            <cena>10000000</cena>
+            <droid>true</droid>
+            <generator>true</generator>
+            <jerab>true</jerab>
+            <pocet_slotu_na_zbrane>5</pocet_slotu_na_zbrane>
+            <radar>true</radar>
+            <rychlost>1200</rychlost>
+            <scaner>true</scaner>
+            <sloty_na_artefakty>4</sloty_na_artefakty>
+            <stity>70</stity>
+            <typ>Special ranger hull, custom shop</typ>
+            <velikost_skoku>52</velikost_skoku>
+          </parametry>
+        </vesmirna_lod>
+      </pilot>
+
+      <planeta nazev_planety="Jupiter" pocet_obyvatel="0"></planeta>
+      <planeta nazev_planety="Saturn" pocet_obyvatel="0"></planeta>
+      <planeta nazev_planety="Uran" pocet_obyvatel="0"></planeta>
+      <planeta nazev_planety="Neptun" pocet_obyvatel="0"></planeta>
+      <planeta nazev_planety="Pluto" pocet_obyvatel="0"></planeta>
+    </system>
+
+    <system nazev_systemu="Beetlegeuse" pocet_planet="3">
+      <planeta nazev_planety="Kappa" pocet_obyvatel="0"></planeta>
+      <planeta nazev_planety="Gamma" pocet_obyvatel="800000000">
+        <obyvatele vstah_k_pilotovi="přátelský">
+          <rasa>Galian</rasa>
+        </obyvatele>
+        <politika>Monarchie</politika>
+        <zamereni>Prumysl</zamereni>
+      </planeta>
+      <planeta nazev_planety="Omega" pocet_obyvatel="0"></planeta>
+    </system>
+  </sektor>
+
+  <sektor nazev_sektoru="Proxima" pocet_systemu="1">
+    <system nazev_systemu="Proxima Centauri" pocet_planet="2">
+      <planeta nazev_planety="XJ105" pocet_obyvatel="10000000000">
+        <obyvatele vstah_k_pilotovi="Nepřátelský">
+          <rasa>Maloc</rasa>
+        </obyvatele>
+        <politika>Diktatura</politika>
+        <zamereni>Zemedelstvi</zamereni>
+        <pilot>
+          <jmeno>KIFF</jmeno>
+          <rank>Pilot</rank>
+          <rasa>Maloc</rasa>
+          <rating ranger_body="1500"></rating>
+          <role>Korzar</role>
+          <vesmirna_lod kapacita="400" typ_trupu="Military Maloc">
+            <parametry>
+              <afterburner>false</afterburner>
+              <cena>80000</cena>
+              <droid>true</droid>
+              <generator>true</generator>
+              <jerab>false</jerab>
+              <pocet_slotu_na_zbrane>5</pocet_slotu_na_zbrane>
+              <radar>true</radar>
+              <rychlost>600</rychlost>
+              <scaner>false</scaner>
+              <sloty_na_artefakty>0</sloty_na_artefakty>
+              <stity>40</stity>
+              <typ>Clasic military Maloc ship</typ>
+              <velikost_skoku>40</velikost_skoku>
+            </parametry>
+          </vesmirna_lod>
+        </pilot>
+      </planeta>
+
+      <planeta nazev_planety="XJ106" pocet_obyvatel="0"></planeta>
+    </system>
+  </sektor>
+
+</vesmir>

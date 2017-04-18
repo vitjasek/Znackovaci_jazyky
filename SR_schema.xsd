@@ -36,9 +36,9 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="obyvatele" maxOccurs="1" minOccurs="0"/>
-        <xs:element ref="zamereni" maxOccurs="1" minOccurs="0"/>
         <xs:element ref="politika" maxOccurs="1" minOccurs="0"/>
-        <xs:element ref="pilot" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="zamereni" maxOccurs="1" minOccurs="0"/>
+        <xs:element ref="pilot"  maxOccurs="unbounded" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="nazev_planety" type="xs:string" use="required"/>
       <xs:attribute name="pocet_obyvatel" type="xs:integer" use="required"/>
@@ -155,7 +155,6 @@
         <xs:element name="afterburner" type="xs:boolean"/>
         <xs:element name="sloty_na_artefakty" type="xs:decimal"/>
         <xs:element name="cena" type="xs:integer"/>
-        <xs:element name="exists" type="xs:boolean"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
