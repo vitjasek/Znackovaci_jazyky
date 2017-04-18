@@ -1,0 +1,99 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<h1>Mapa vesm&iacute;ru</h1>
+<h2>Počet sektorů: 2</h2>
+<table border="1">
+<tr>
+<td>Sektor</td><td>Pocet systemu</td>
+</tr>
+<tr>
+<td>Karagon</td><td>2</td>
+</tr>
+<tr>
+<td>System</td><td>Pocet planet</td>
+</tr>
+<tr>
+<td>Slunecni soustava</td><td>9</td>
+</tr>
+<tr>
+<td>Betelgeuse</td><td>3</td>
+</tr>
+<tr>
+<td>---------</td><td>----------</td>
+</tr>
+<tr>
+<td>Sektor</td><td>Pocet systemu</td>
+</tr>
+<tr>
+<td>Perez</td><td>1</td>
+</tr>
+<tr>
+<td>System</td><td>Pocet planet</td>
+</tr>
+<tr>
+<td>Castor</td><td>2</td>
+</tr>
+<tr></tr>
+</table>
+<h1>Info o syst&eacute;mu</h1>
+<table border="1">
+<tr>
+<td>Planety syst&eacute;mu</td><td>Vstah k pilotovi</td><td>Rasa</td>
+</tr>
+<tr>
+<td>Merkur</td><td></td><td></td>
+</tr>
+<tr>
+<td>Venuše</td><td>Př&aacute;telsk&yacute;</td><td>Člověk</td>
+</tr>
+<tr>
+<td>Země</td><td>Př&aacute;telsk&yacute;</td><td>Člověk</td>
+</tr>
+<tr>
+<td>Mars</td><td>neutr&aacute;ln&iacute;</td><td>Člověk</td>
+</tr>
+<tr>
+<td>Jupiter</td><td></td><td></td>
+</tr>
+<tr>
+<td>Saturn</td><td></td><td></td>
+</tr>
+<tr>
+<td>Uran</td><td></td><td></td>
+</tr>
+<tr>
+<td>Neptun</td><td></td><td></td>
+</tr>
+<tr>
+<td>Pluto</td><td></td><td></td>
+</tr>
+</table>
+<h1>Info o pilotovi</h1>
+<h2>Pilot</h2>
+<table border="1">
+<tr>
+<td>Jm&eacute;no</td><td>Rank</td><td>Rasa</td><td>Rating</td><td>Role</td>
+</tr>
+<tr>
+<td>Rimmer</td><td>Eso</td><td>Člověk</td><td>10000</td><td>Ranger</td>
+</tr>
+</table>
+<h2>Loď</h2>
+<ul>
+<li>Kapacita: 1000</li>
+<li>Typ trupu: Custom ranger ACE hull</li>
+<li>Afterburner: true</li>
+<li>Cena: 10000000</li>
+<li>Droid: true</li>
+<li>Gener&aacute;tor: true</li>
+<li>Jeř&aacute;b: true</li>
+<li>Počet slotů na zbraně: 5</li>
+<li>Radar: true</li>
+<li>Rychlost: 1200</li>
+<li>Scaner: true</li>
+<li>Sloty na artefakty: 4</li>
+<li>Št&iacute;ty: 70</li>
+<li>Typ trupu: Special ranger hull, custom shop</li>
+<li>Velikost skoku: 52</li>
+</ul>
+</html>
