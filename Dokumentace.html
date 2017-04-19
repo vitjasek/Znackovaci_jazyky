@@ -215,15 +215,24 @@ Patička (autor atd.) -->
         </section>
 
         <section>
-          <h2 id="popis_transformace">
-            Popis transformace
-          </h2>
+          <h2 id="popis_transformace">Popis transformace</h2>
+            <p>Transformace dokumentu XML si v mém případě můžeme představit, jako kdyby jsme najeli myší na příslušný objekt a zmáčkli sekundární tlačítko myši.
+              Data, resp. texty jsou zobrazeny v tabulkách pro lepší čitelnost.</p>
+            <h3>Mapa, informace z mapy</h3>
+            <p>Tato transformace vypíše počet nám znaámých sektorů, a v každém sektoru vypíše všechny systémy.
+            Dále pak ještě zobrazí informace o systému tj. jaký mají planety obyvatele a vztah k pilotovi. Toto už je interakce na mapě.</p>
+            <h3>Informace o pilotovi a jeho lodi</h3>
+            <p>První se vypíší informace o pilotovi, poté je vypsána jeho loď. Opět si to můžeme představit jako RMB klik na loď ve vesmíru.</p>
         </section>
 
         <section>
           <h2 id="zaver">
             Závěr
           </h2>
+          <p>V této práci je naznačen návrh, jistého nastavení video hry. I když svým rozsahem se ani trochu nepřibližuje tomu jak by to u finální video hry vypadalo,
+          je zde aspoň vidět praktické využití XML. První jsem vytvořil stylesheet SR_schema.xsd, kde jsem si nadefinoval různá omezení a tagy.
+          Poté jsem vytvořil SR_xml.xml kde jsem už pomocí inteligentního našeptávače studia jen stavěl příslušný dokument.
+          V praxi by asi každý objekt měl svůj soubor. Následně jsem vytvořil SR_XSLT.xsl kde jsem pomocí transoformace vytahal z XML dokumentu užitečná/potřebná data.</p>
         </section>
         <footer>
           Napsal Vít&nbsp;Jašek&nbsp;&nbsp;&copy;.
